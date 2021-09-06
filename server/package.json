@@ -1,0 +1,37 @@
+{
+  "name": "server-reformas",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "strapi": "3.5.4",
+    "strapi-admin": "3.5.4",
+    "strapi-utils": "3.5.4",
+    "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-content-manager": "3.5.4",
+    "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-plugin-email": "3.5.4",
+    "strapi-plugin-upload": "3.5.4",
+    "strapi-connector-bookshelf": "3.5.4",
+    "knex": "<0.20.0",
+    "sqlite3": "latest"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "b595419f-2ee2-4d05-8d2d-0f164b94089c"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

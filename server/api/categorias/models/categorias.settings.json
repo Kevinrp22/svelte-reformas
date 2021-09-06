@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "name": "Categorias"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "contenido": {
+      "type": "richtext"
+    },
+    "precio_desde": {
+      "type": "decimal"
+    },
+    "precio_hasta": {
+      "type": "decimal"
+    },
+    "destacado": {
+      "type": "boolean"
+    },
+    "portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "titulo"
+    },
+    "servicios": {
+      "via": "categoria",
+      "collection": "servicios"
+    }
+  }
+}

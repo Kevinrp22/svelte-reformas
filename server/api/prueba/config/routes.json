@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/prueba",
+      "handler": "prueba.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/prueba",
+      "handler": "prueba.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/prueba",
+      "handler": "prueba.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

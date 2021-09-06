@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicios",
+  "info": {
+    "name": "servicios"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "unique": true
+    },
+    "contenido": {
+      "type": "richtext"
+    },
+    "portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "destacado": {
+      "type": "boolean"
+    },
+    "precio_desde": {
+      "type": "integer"
+    },
+    "precio_hasta": {
+      "type": "integer"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "titulo",
+      "required": false
+    },
+    "categoria": {
+      "model": "categorias",
+      "via": "servicios"
+    }
+  }
+}

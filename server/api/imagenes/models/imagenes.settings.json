@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "imagenes",
+  "info": {
+    "name": "Imagenes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "destacado": {
+      "type": "boolean"
+    },
+    "tags": {
+      "collection": "tags"
+    },
+    "lugar": {
+      "type": "string"
+    }
+  }
+}
